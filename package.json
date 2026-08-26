@@ -3,6 +3,8 @@
   "displayName": "Python Collapse Functions",
   "description": "Adds a button to collapse all function definitions in a Python file.",
   "publisher": "khalidelassaad",
+  "repository": "https://github.com/khalidelassaad/python_collapse_functions",
+  "license": "MIT",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.70.0"
