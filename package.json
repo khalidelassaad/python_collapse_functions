@@ -1,0 +1,43 @@
+{
+  "name": "python-collapse-functions",
+  "displayName": "Python Collapse Functions",
+  "description": "Adds a button to collapse all function definitions in a Python file.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:python-collapse-functions.collapseAll"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "python-collapse-functions.collapseAll",
+        "title": "Collapse All Functions",
+        "icon": "$(fold)"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "python-collapse-functions.collapseAll",
+          "when": "resourceLangId == python",
+          "group": "navigation@1"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.70.0",
+    "typescript": "^4.5.0"
+  }
+}
