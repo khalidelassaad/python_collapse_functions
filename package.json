@@ -2,6 +2,7 @@
   "name": "python-collapse-functions",
   "displayName": "Python Collapse Functions",
   "description": "Adds a button to collapse all function definitions in a Python file.",
+  "publisher": "khalidelassaad",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.70.0"
