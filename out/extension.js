@@ -12,6 +12,8 @@ function activate(context) {
         if (document.languageId !== 'python') {
             return;
         }
+        // 0. Expand all folds first (Ctrl+K, Ctrl+J)
+        await vscode.commands.executeCommand('editor.unfoldAll');
         // 1. Get all folding ranges from the language provider
         const foldingRanges = await vscode.commands.executeCommand('vscode.executeFoldingRangeProvider', document.uri);
         if (!foldingRanges || foldingRanges.length === 0) {

@@ -14,6 +14,9 @@ export function activate(context: vscode.ExtensionContext) {
                 return;
             }
 
+            // 0. Expand all folds first (Ctrl+K, Ctrl+J)
+            await vscode.commands.executeCommand('editor.unfoldAll');
+
             // 1. Get all folding ranges from the language provider
             const foldingRanges = await vscode.commands.executeCommand<vscode.FoldingRange[]>(
                 'vscode.executeFoldingRangeProvider',
